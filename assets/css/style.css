@@ -128,10 +128,18 @@ body {
 		background-color: var(--one);
 	}
 
+	.h1 {
+		font-size: 3rem;
+	}
+
 }
 
-.h1 {
+@media (min-width: 992px) {
+	
+	.h1 {
 	font-size: 5rem;
+}
+
 }
 
 .border-bottom-three {
