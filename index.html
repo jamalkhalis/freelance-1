@@ -7,6 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="./assets/libraries/icons/bootstrap-icons/bootstrap-icons.css">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="./assets/libraries/bootstrap/css/bootstrap.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 	<title>Next HTML Template</title>
 </head>
@@ -22,9 +24,10 @@
 				
 				<div class="container-fluid">
 
-					<a class="navbar-brand ps-3" href="index.html">
+					<a class="navbar-brand ps-3 py-0" href="index.html">
 				
-						<img src="./assets/logo/logo-white.png" width="63" height="38">
+						<img class="py-0" src="./assets/logo/logo-white.png" width="63" height="38">
+						<!-- <img src="./assets/logo/logo-white.png" width="62" height="28"> -->
 
 					</a>
 
@@ -69,11 +72,11 @@
 			</nav>
 		</header>
 
-		<div class="container text-color-one fw-bolder h-75">
+		<div class="container text-color-one fw-bolder h-75" data-aos="fade-up" data-aos-duration="3000">
 
 			<div class="row h-100 align-items-center">
 				<div class="col-lg-8">
-					<h4>Freelance digital designer</h4>
+					<h4 class="py-3">Freelance digital designer</h4>
 					<h1 class="h1">
 						Hi there, I’m <span class="text-color-six fw-bolder border-bottom-three">Mike</span> glad to see you here
 					</h1>
@@ -381,17 +384,19 @@
 
 				<div class="col-lg-8">
 
+					<form action="assets/php/mailer.php" method="post" novalidate="novalidate">
+
 					<div class="row">
 
 						<div class="col-6">
 
 							<div class="form-floating mb-3">
-								<input type="text" class="form-control bg-transparent shadow-none border-0 border-bottom ps-0 rounded-0" id="floatingInputFirstName" placeholder="First Name">
-								<label class="ps-0" for="floatingInputFirstName">Fist Name</label>
+								<input name="name" type="text" class="form-control bg-transparent shadow-none border-0 border-bottom ps-0 rounded-0" id="floatingInputFirstName" placeholder="First Name">
+								<label class="ps-0" for="floatingInputFirstName">First Name</label>
 							</div>
 
 							<div class="form-floating mb-3">
-								<input type="email" class="form-control bg-transparent shadow-none border-0 border-bottom ps-0 rounded-0" id="floatingInputEmail" placeholder="Your email address">
+								<input name="email" type="email" class="form-control bg-transparent shadow-none border-0 border-bottom ps-0 rounded-0" id="floatingInputEmail" placeholder="Your email address">
 								<label class="ps-0" for="floatingInputEmail">Your email address</label>
 							</div>
 
@@ -400,13 +405,13 @@
 						<div class="col-6">
 
 							<div class="form-floating mb-3">
-								<input type="text" class="form-control bg-transparent shadow-none border-0 border-bottom ps-0 rounded-0" id="floatingInputLastName" placeholder="Last Name">
+								<input name="lname" type="text" class="form-control bg-transparent shadow-none border-0 border-bottom ps-0 rounded-0" id="floatingInputLastName" placeholder="Last Name">
 								<label class="ps-0" for="floatingInputLastName">Last Name</label>
 							</div>
 
 							<div class="form-floating mb-3">
-								<input type="email" class="form-control bg-transparent shadow-none border-0 border-bottom ps-0 rounded-0" id="floatingInputCity" placeholder="Your email address">
-								<label class="ps-0" for="floatingInputCity">Your email address</label>
+								<input name="country" type="text" class="form-control bg-transparent shadow-none border-0 border-bottom ps-0 rounded-0" id="floatingInputCity" placeholder="Your country">
+								<label class="ps-0" for="floatingInputCity">Your country</label>
 							</div>
 
 						</div>
@@ -414,7 +419,7 @@
 					</div>
 
 					<div class="form-floating">
-						<textarea class="form-control bg-transparent shadow-none border-0 border-bottom ps-0 rounded-0" placeholder="I'dd love to hear words from you" id="floatingTextareaMessage" style="height: 100px"></textarea>
+						<textarea name="message" class="form-control bg-transparent shadow-none border-0 border-bottom ps-0 rounded-0" placeholder="I'dd love to hear words from you" id="floatingTextareaMessage" style="height: 100px"></textarea>
 						<label for="floatingTextareaMessage" class="ps-0">Message</label>
 					</div>
 
@@ -429,8 +434,10 @@
 						</button>
 						
 					</div>
+
+				</form>
 					
-				</div>
+				</div> <!--  / .col-lg-8 -->
 
 			</div>
 
@@ -470,7 +477,12 @@
 
 	<!-- Bootstrap JavaScript: Bundle with Popper -->
 	<script type="text/javascript" src="./assets/libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 	<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 	<script type="text/javascript" src="./assets/js/scripts.js"></script>
+
 </body>
 </html>

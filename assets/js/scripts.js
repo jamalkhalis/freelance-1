@@ -5,3 +5,5 @@ tabEl.addEventListener('hide.bs.tab', function (event) {
   event.relatedTarget.style.border = "0px"; // previous active tab
 
 })
+
+AOS.init();
